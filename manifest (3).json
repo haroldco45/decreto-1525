@@ -1,0 +1,14 @@
+{
+  "name": "Decreto 1525 explicado",
+  "short_name": "Decreto 1525",
+  "description": "Las nuevas reglas de la protesta social en Colombia, en palabras sencillas. Vibras Positivas HM.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f6f7f9",
+  "theme_color": "#14213a",
+  "lang": "es-CO",
+  "icons": [
+    {"src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable"}
+  ]
+}

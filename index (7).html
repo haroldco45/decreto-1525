@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Decreto 1525 explicado</title>
+<meta name="description" content="Qué cambia con el Decreto 1525 de 2026 en las reglas de la protesta social en Colombia, explicado en lenguaje sencillo.">
+<meta name="theme-color" content="#14213a">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Decreto 1525 de 2026 explicado">
+<meta property="og:description" content="Las nuevas reglas de la protesta, en palabras sencillas. Ponte a prueba con 7 casos.">
+<meta property="og:url" content="https://haroldco45.github.io/decreto-1525/">
+<meta property="og:image" content="https://haroldco45.github.io/decreto-1525/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="es_CO">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="manifest" href="manifest.json">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: una sola columna de lectura (~68ch), como una guía de señalización vial: franjas amarillas marcan lo que la norma ordena. */
+:root{
+  --ink:#14213a; --paper:#f6f7f9; --card:#ffffff; --line:#d9dde5; --muted:#5b6578;
+  --sign:#f2b705; --sign-ink:#14213a; --ok:#1f7a4d; --no:#b3261e; --ok-bg:#e7f4ec; --no-bg:#fbeceb;
+  --display:"Archivo","Arial Narrow",Arial,sans-serif;
+  --body:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --ink:#e8ecf3; --paper:#0f1626; --card:#172036; --line:#2a3550; --muted:#9aa5bb;
+  --sign:#f5c431; --sign-ink:#14213a; --ok:#5fcf93; --no:#f08a82; --ok-bg:#15301f; --no-bg:#3a1a19; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --ink:#e8ecf3; --paper:#0f1626; --card:#172036; --line:#2a3550; --muted:#9aa5bb;
+  --sign:#f5c431; --sign-ink:#14213a; --ok:#5fcf93; --no:#f08a82; --ok-bg:#15301f; --no-bg:#3a1a19; color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;margin:0}
+.wrap{max-width:46rem;margin:0 auto;padding-inline:18px;padding-block:0 3rem}
+h1,h2,h3{font-family:var(--display);line-height:1.1;text-wrap:balance;margin:0}
+h2{font-size:1.65rem;font-weight:800;font-stretch:80%;letter-spacing:-.01em}
+h3{font-size:1.1rem;font-weight:700}
+p{margin:0}
+a{color:inherit}
+.tag{font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.ref{font-family:var(--mono);font-size:.75rem;color:var(--muted);white-space:nowrap}
+
+/* Cabecera */
+.hero{border-bottom:6px solid var(--sign);padding-block:2.2rem 1.6rem;display:grid;gap:.9rem}
+.hero h1{font-size:clamp(2.3rem,9vw,3.6rem);font-weight:900;font-stretch:72%;letter-spacing:-.02em;text-transform:uppercase}
+.hero h1 span{display:block;font-stretch:100%;font-weight:600;font-size:.42em;text-transform:none;letter-spacing:0;color:var(--muted);margin-top:.4rem}
+.lead{font-size:1.12rem}
+.meta{display:flex;flex-wrap:wrap;gap:.4rem .9rem}
+
+/* Navegación */
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--paper);border-bottom:1px solid var(--line);margin-inline:-18px;padding:.6rem 18px;display:flex;gap:.5rem;overflow-x:auto;scrollbar-width:none}
+nav a{font-family:var(--display);font-weight:600;font-size:.88rem;text-decoration:none;padding:.35rem .75rem;border:1px solid var(--line);border-radius:99px;white-space:nowrap;background:var(--card)}
+nav a:hover,nav a:focus-visible{border-color:var(--ink);outline:none}
+
+section{padding-block:2.4rem 0;display:grid;gap:1.1rem;scroll-margin-top:3.5rem}
+.sum{display:grid;gap:.8rem;padding:0;margin:0;list-style:none}
+.sum li{display:grid;grid-template-columns:2.2rem 1fr;gap:.8rem;align-items:start}
+.sum b{font-family:var(--display)}
+.ico{width:2.2rem;height:2.2rem;border-radius:6px;background:var(--sign);color:var(--sign-ink);display:grid;place-items:center;font-family:var(--display);font-weight:900;font-size:1rem}
+
+/* Escalera de niveles */
+.ladder{display:grid;gap:.5rem}
+.lvl{display:grid;grid-template-columns:3rem 1fr;gap:.9rem;align-items:center;width:100%;text-align:left;font:inherit;color:inherit;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:.7rem .9rem;cursor:pointer}
+.lvl:focus-visible{outline:2px solid var(--sign);outline-offset:2px}
+.lvl .n{font-family:var(--display);font-weight:900;font-size:1.6rem;font-stretch:70%;text-align:center;border-radius:6px;padding:.1rem 0;background:color-mix(in srgb,var(--sign) calc(var(--k)*20%),var(--card));color:var(--ink)}
+.lvl[aria-expanded="true"]{border-color:var(--ink)}
+.lvl .t{font-family:var(--display);font-weight:700}
+.lvl .d{grid-column:2;font-size:.95rem;color:var(--muted)}
+.note{background:var(--card);border-left:5px solid var(--sign);padding:.9rem 1rem;border-radius:0 8px 8px 0;font-size:.97rem}
+
+/* Quiz */
+.quiz{display:grid;gap:.9rem}
+.q{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:1rem;display:grid;gap:.7rem}
+.q .s{font-weight:600}
+.btns{display:flex;flex-wrap:wrap;gap:.5rem}
+.btns button{font-family:var(--display);font-weight:700;font-size:.95rem;padding:.5rem 1.1rem;border-radius:6px;border:1.5px solid var(--ink);background:transparent;color:var(--ink);cursor:pointer}
+.btns button:focus-visible{outline:2px solid var(--sign);outline-offset:2px}
+.btns button[disabled]{opacity:.45;cursor:default}
+.ans{border-radius:6px;padding:.7rem .85rem;font-size:.95rem}
+.ans.good{background:var(--ok-bg)} .ans.bad{background:var(--no-bg)}
+.ans strong{font-family:var(--display)}
+.score{font-family:var(--display);font-weight:700}
+
+/* Listas de factores */
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,19rem),1fr));gap:1rem}
+.box{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:1rem;display:grid;gap:.6rem;align-content:start;min-width:0}
+.box ol,.box ul{margin:0;padding-left:1.2rem;display:grid;gap:.3rem;font-size:.95rem}
+.keep li::marker{content:"✓  ";color:var(--ok)}
+
+/* Corredor */
+.road{border-radius:10px;overflow:hidden;border:1px solid var(--line)}
+.road svg{display:block;width:100%;height:auto}
+
+/* Línea de tiempo */
+.time{list-style:none;margin:0;padding:0;display:grid;gap:0}
+.time li{display:grid;grid-template-columns:6.5rem 1fr;gap:1rem;padding:.75rem 0;border-top:1px solid var(--line)}
+.time li:first-child{border-top:0}
+.time .w{font-family:var(--display);font-weight:800;font-stretch:80%;font-variant-numeric:tabular-nums}
+
+.debate{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,19rem),1fr));gap:1rem}
+footer{margin-top:3rem;padding-top:1.2rem;border-top:6px solid var(--sign);display:grid;gap:.5rem;font-size:.9rem;color:var(--muted)}
+footer b{color:var(--ink);font-family:var(--display)}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<header class="hero">
+  <p class="tag">Explicación ciudadana · Ministerio del Interior</p>
+  <h1>Decreto 1525 de 2026<span>Las nuevas reglas para actuar en una protesta, en palabras sencillas</span></h1>
+  <p class="lead">Firmado el 13 de octubre de 2026, modifica el <b>Decreto 003 de 2021</b>, el protocolo que dice cómo deben actuar las autoridades cuando la gente sale a protestar. No crea una ley nueva: ajusta ese protocolo.</p>
+  <div class="meta"><span class="ref">26 artículos</span><span class="ref">Firma: Pdte. Abelardo de la Espriella · MinInterior Rodrigo Lara</span><span class="ref">Rige desde su publicación en el Diario Oficial</span></div>
+</header>
+
+<nav aria-label="Secciones">
+  <a href="#resumen">En 1 minuto</a><a href="#niveles">Los 5 niveles</a><a href="#prueba">Ponte a prueba</a><a href="#vias">Bloqueos</a><a href="#corredor">Corredor solidario</a><a href="#queda">Lo que no cambia</a><a href="#despues">Después de la marcha</a><a href="#debate">El debate</a>
+</nav>
+
+<section id="resumen">
+  <h2>En un minuto</h2>
+  <ul class="sum">
+    <li><span class="ico">1</span><p><b>Protestar pacíficamente sigue siendo un derecho.</b> Toda marcha se presume pacífica y no necesita permiso previo.</p></li>
+    <li><span class="ico">2</span><p><b>El diálogo va primero, pero no frena a la Policía frente a quien agrede.</b> Se puede actuar contra la persona violenta mientras se sigue dialogando con el resto. <span class="ref">Art. 1 y 2</span></p></li>
+    <li><span class="ico">3</span><p><b>Bloquear una vía no vuelve violenta la marcha.</b> Solo se puede disolver en casos excepcionales, con perturbación grave y sostenida. <span class="ref">Art. 16</span></p></li>
+    <li><span class="ico">4</span><p><b>Siempre debe haber paso para ambulancias, bomberos, medicamentos y alimentos.</b> Es un deber de las autoridades. <span class="ref">Art. 18</span></p></li>
+    <li><span class="ico">5</span><p><b>Todo queda por escrito.</b> Cada orden se anota con hora y nombre en el acta del Puesto de Mando Unificado (PMU). <span class="ref">Art. 7</span></p></li>
+    <li><span class="ico">6</span><p><b>Hay que rendir cuentas.</b> En 72 horas la alcaldía publica un balance de daños, heridos y capturas. <span class="ref">Art. 23</span></p></li>
+  </ul>
+</section>
+
+<section id="niveles">
+  <h2>Los 5 niveles de actuación</h2>
+  <p>La autoridad sube de nivel solo si el anterior no funcionó, y debe explicar por qué en el acta del PMU. Toca cada nivel para ver qué significa. <span class="ref">Art. 20 (art. 31A)</span></p>
+  <div class="ladder" id="ladder"></div>
+  <p class="note">Para pasar a los niveles 4 y 5 se necesita la orden del alcalde, el gobernador (o el Presidente o Ministro del Interior en lo que les corresponde) y dejarlo en el acta. La excepción: si hay riesgo inminente para la vida o se va a cometer un delito, el comandante puede actuar sin orden previa y debe informar de inmediato.</p>
+</section>
+
+<section id="prueba">
+  <h2>Ponte a prueba: ¿la Policía puede intervenir?</h2>
+  <p>Situaciones reales de una marcha. Responde y mira qué dice el decreto.</p>
+  <p class="score" id="score" aria-live="polite">0 de 7 respondidas</p>
+  <div class="quiz" id="quiz"></div>
+</section>
+
+<section id="vias">
+  <h2>Bloqueos de vías: qué se mira antes de intervenir</h2>
+  <p>Ocupar la calle es parte normal de una marcha. El decreto dice que solo en situaciones excepcionales se puede disolver, cuando la perturbación es grave y sostenida y no hay otro medio menos lesivo. Para decidir, el PMU debe revisar y anotar estos factores:</p>
+  <div class="grid2">
+    <div class="box"><h3>Bloqueo de una vía</h3><span class="ref">Art. 16 (art. 30C)</span>
+      <ol><li>Si hay vías alternas y en qué estado están</li><li>Cuánto tiempo lleva el bloqueo</li><li>Si se afectó el paso de vehículos de emergencia</li><li>Si se afectó el suministro de bienes o servicios esenciales</li><li>Si los negocios y familias de la zona perdieron su sustento por un bloqueo prolongado</li><li>Si el bloqueo es total o parcial</li><li>Qué tan importante es la vía (corredores regionales o nacionales)</li><li>Si hay personas de especial protección</li><li>Si hay actos de violencia</li></ol></div>
+    <div class="box"><h3>Ocupar la entrada de una empresa o planta</h3><span class="ref">Art. 17 (art. 30D)</span>
+      <ol><li>Tiempo de la ocupación y si es continua</li><li>Pérdida económica comprobada</li><li>Si hay accesos alternos</li><li>Si impide la entrada o salida de trabajadores</li><li>Si impide el ingreso de comida, agua o medicamentos para quienes están adentro</li><li>Si pone en riesgo la seguridad industrial o ambiental</li><li>Si afecta un servicio público esencial</li><li>Si pone en riesgo empleos de terceros</li><li>Si hay diálogo activo (en ese caso, se privilegia seguir dialogando)</li></ol></div>
+  </div>
+  <p class="note">Una "vía alterna" solo cuenta si el recorrido toma un tiempo parecido al de la vía bloqueada en condiciones normales. <span class="ref">Art. 10</span></p>
+</section>
+
+<section id="corredor">
+  <h2>El corredor solidario</h2>
+  <p>Es una franja libre, continua y señalizada que debe existir en toda marcha. Abrirla es obligación de la alcaldía y la Policía, y no es una condición para poder protestar. <span class="ref">Art. 5 y 18</span></p>
+  <div class="road" role="img" aria-label="Dibujo de una calle con manifestantes a los lados y una franja amarilla libre en el centro por donde pasan una ambulancia y un camión de bomberos">
+    <svg viewBox="0 0 640 220" xmlns="http://www.w3.org/2000/svg">
+      <rect width="640" height="220" fill="var(--card)"/>
+      <rect x="0" y="30" width="640" height="160" fill="var(--line)"/>
+      <rect x="0" y="85" width="640" height="50" fill="var(--sign)"/>
+      <g fill="var(--sign-ink)" font-family="Archivo, Arial, sans-serif" font-weight="800" font-size="15">
+        <text x="20" y="116">CORREDOR SOLIDARIO →</text>
+      </g>
+      <g fill="var(--muted)">
+        <circle cx="40" cy="55" r="9"/><circle cx="75" cy="60" r="9"/><circle cx="110" cy="52" r="9"/><circle cx="150" cy="62" r="9"/><circle cx="190" cy="54" r="9"/><circle cx="230" cy="61" r="9"/><circle cx="270" cy="53" r="9"/><circle cx="310" cy="60" r="9"/><circle cx="350" cy="55" r="9"/><circle cx="390" cy="62" r="9"/>
+        <circle cx="45" cy="162" r="9"/><circle cx="85" cy="168" r="9"/><circle cx="125" cy="160" r="9"/><circle cx="165" cy="166" r="9"/><circle cx="205" cy="159" r="9"/><circle cx="245" cy="167" r="9"/><circle cx="285" cy="161" r="9"/><circle cx="325" cy="168" r="9"/><circle cx="365" cy="160" r="9"/><circle cx="405" cy="166" r="9"/>
+      </g>
+      <g>
+        <rect x="430" y="92" width="80" height="36" rx="5" fill="var(--paper)" stroke="var(--ink)" stroke-width="2"/>
+        <rect x="462" y="99" width="16" height="22" fill="var(--no)"/><rect x="459" y="106" width="22" height="8" fill="var(--no)"/>
+        <rect x="525" y="92" width="95" height="36" rx="5" fill="var(--no)"/>
+        <rect x="532" y="99" width="30" height="12" fill="var(--paper)"/>
+      </g>
+      <g fill="var(--ink)" font-family="Archivo, Arial, sans-serif" font-size="13" font-weight="600">
+        <text x="20" y="22">Manifestantes</text><text x="20" y="210">Manifestantes</text>
+        <text x="430" y="22">Ambulancia y bomberos pasan</text>
+      </g>
+    </svg>
+  </div>
+  <div class="box"><h3>¿Quién pasa por ahí?</h3>
+    <ul><li>Misión médica, ambulancias, bomberos y organismos de socorro</li><li>Personas con discapacidad, personas mayores, mujeres gestantes, niños, niñas y adolescentes</li><li>Insumos hospitalarios, medicamentos y alimentos perecederos</li></ul></div>
+  <p class="note">Si después de dialogar no es posible abrir el corredor, o alguien se niega expresamente a dejar pasar una ambulancia, eso se anota en el acta y se considera que el diálogo se agotó. <span class="ref">Art. 18 y 19</span></p>
+</section>
+
+<section id="queda">
+  <h2>Lo que no cambia</h2>
+  <p>El propio decreto dice que conserva estas garantías del Decreto 003 de 2021:</p>
+  <div class="box"><ul class="keep">
+    <li>Toda manifestación se presume pacífica.</li>
+    <li>No hace falta avisar ni pedir permiso; las marchas espontáneas también valen.</li>
+    <li>Los policías que intervienen en una protesta no pueden usar armas de fuego.</li>
+    <li>El Ejército y las Fuerzas Militares no intervienen en las protestas.</li>
+    <li>Nadie puede ser estigmatizado por protestar.</li>
+    <li>Se diferencia entre quien protesta en paz y quien agrede.</li>
+    <li>Las comisiones de verificación de la sociedad civil siguen funcionando.</li>
+    <li>La información recogida no puede usarse para inteligencia ni para hacer perfiles de quienes marchan.</li>
+  </ul></div>
+  <div class="grid2">
+    <div class="box"><h3>Lo que NO justifica intervenir</h3>
+      <ul><li>Que la gente lleve la cara cubierta</li><li>Quién convocó la marcha o lo que dice</li><li>Anuncios o discursos previos</li><li>Que haya niños acompañando a sus familias</li><li>Ruidos, molestias o incomodidades propias de una marcha</li></ul></div>
+    <div class="box"><h3>Lo que sí se considera violencia</h3>
+      <ul><li>Agredir personas o lanzar objetos que causen lesiones graves</li><li>Portar armas, explosivos o artefactos incendiarios</li><li>Retener a alguien contra su voluntad</li><li>Destruir bienes públicos o privados</li><li>Usar a menores o mujeres gestantes como escudo</li><li>Amenazar a quien marcha o a quien no marcha</li></ul></div>
+  </div>
+</section>
+
+<section id="despues">
+  <h2>Después de la marcha</h2>
+  <p>El decreto refuerza la rendición de cuentas con plazos concretos.</p>
+  <ul class="time">
+    <li><span class="w">48 horas</span><p>Si hubo afectaciones graves, se convoca consejo de seguridad con el Ministerio Público para revisar qué falló. <span class="ref">Art. 24</span></p></li>
+    <li><span class="w">72 horas</span><p>La alcaldía (o gobernación) publica en su página web un balance: heridos o fallecidos, bienes dañados, servicios afectados, denuncias, capturas y también las afectaciones atribuidas a agentes del Estado, como lesiones oculares. Además abre una ruta de atención para las personas afectadas. <span class="ref">Art. 23</span></p></li>
+    <li><span class="w">3 meses</span><p>Plazo máximo para que el alcalde o gobernador explique en público el uso de armas letales o menos letales que hayan causado daños, y el estado de las investigaciones. <span class="ref">Art. 25</span></p></li>
+  </ul>
+  <p class="note">Si capturan o trasladan a alguien, el informe debe decir quién, a qué hora, dónde, qué autoridad actuó y que se avisó a su familia o a una organización de derechos humanos. <span class="ref">Art. 22</span></p>
+</section>
+
+<section id="debate">
+  <h2>El debate</h2>
+  <p>El decreto llegó el 13 de octubre, horas antes de las primeras marchas convocadas por la oposición en este gobierno. Estas son las posiciones públicas:</p>
+  <div class="debate">
+    <div class="box"><h3>Lo que dice el Gobierno</h3><p>Que fortalece las garantías de quien protesta en paz y permite que las autoridades actúen, dentro de la ley, frente a la violencia, el vandalismo y los bloqueos que afectan a millones de ciudadanos.</p></div>
+    <div class="box"><h3>Lo que se ha cuestionado</h3><p>El momento de su expedición, a horas de una movilización, y su efecto inmediato. El propio decreto reconoce que la consulta pública duró una semana (28 de septiembre a 4 de octubre), con un "término reducido".</p></div>
+  </div>
+  <p>Esta app explica lo que dice el texto. Para formarte tu opinión, lee el decreto completo.</p>
+  <p><a href="https://www.valoraanalitik.com/wp-content/uploads/2026/10/DECRETO-No.-1525-DEL-13-DE-OCTUBRE-DE-2026-1791934766080.pdf" target="_blank" rel="noopener"><b>Leer el Decreto 1525 completo (PDF, 25 páginas)</b></a></p>
+</section>
+
+<footer>
+  <p><b>Vibras Positivas HM</b> · App ciudadana hecha en Caucasia, Antioquia</p>
+  <p>Basada en el texto oficial del Decreto 1525 del 13 de octubre de 2026. Actualizada: <span id="upd">13 oct 2026, 9:00 p. m. (hora Colombia)</span>. Esto es información pedagógica, no asesoría jurídica.</p>
+</footer>
+</div>
+
+<script>
+const niveles=[
+ ["Facilitación y prevención","Gestores de convivencia de la alcaldía y equipos de diálogo acompañan la marcha para que transcurra en paz."],
+ ["Diálogo directo","Conversación con los organizadores o líderes en terreno para resolver la situación."],
+ ["Mediación","Entran Defensoría, Procuraduría, Personería, comisiones de verificación u otros mediadores."],
+ ["Disuasión","Presencia policial, advertencias y comunicación para evitar llegar a la fuerza. Requiere orden y acta."],
+ ["Restablecimiento del orden","Interviene la Unidad de Diálogo y Mantenimiento del Orden (antes Esmad) u otra unidad policial. Último recurso, con orden y acta. Cuando cese la violencia, se vuelve al diálogo."]
+];
+const lad=document.getElementById('ladder');
+niveles.forEach(([t,d],i)=>{
+  const b=document.createElement('button');b.className='lvl';b.style.setProperty('--k',i+1);b.id='lvl'+(i+1);
+  b.setAttribute('aria-expanded','false');
+  b.innerHTML=`<span class="n">${i+1}</span><span class="t">${t}</span><span class="d" hidden>${d}</span>`;
+  b.onclick=()=>{const o=b.getAttribute('aria-expanded')==='true';b.setAttribute('aria-expanded',!o);b.querySelector('.d').hidden=o;};
+  lad.appendChild(b);
+});
+
+const casos=[
+ ["Un grupo bloquea una avenida de forma pacífica durante una hora.",false,"El bloqueo por sí solo no vuelve violenta la marcha. Solo se puede disolver en casos excepcionales, con perturbación grave y sostenida y sin otro medio menos lesivo, revisando los 9 factores.","Art. 16"],
+ ["Una persona dentro de la marcha lanza piedras contra un bus.",true,"Es un acto de violencia. La Policía actúa contra esa persona, no contra toda la marcha. Quienes protestan en paz conservan todas sus garantías y el diálogo sigue.","Art. 2 y 15"],
+ ["Varios manifestantes llevan el rostro cubierto.",false,"El decreto prohíbe expresamente usar el rostro cubierto, la convocatoria o los discursos previos como razón para intervenir.","Art. 2"],
+ ["Desde el inicio, alguien porta un machete y amenaza a transeúntes.",true,"Si hay armas desde el comienzo, se puede actuar contra esa persona sin agotar los niveles 1 a 3 cuando no sea posible, dejando la razón en el acta y avisando al Ministerio Público.","Art. 2"],
+ ["Hay niños marchando con sus papás.",false,"La sola presencia de niños, niñas o mujeres gestantes no es instrumentalización ni violencia, y no permite intervenir. Distinto es usarlos como escudo.","Art. 5"],
+ ["Tras dialogar, los manifestantes se niegan a dejar pasar una ambulancia.",true,"Negarse a dar paso a vehículos de emergencia se anota en el acta y agota la etapa de diálogo. Aun así, la fuerza solo puede dirigirse a quienes causan esa situación, nunca de forma generalizada.","Art. 18 y 19"],
+ ["Rompen la vitrina de un almacén. ¿Puede la Policía usar fuerza letal?",false,"La Policía debe actuar para detener el ataque, pero la protección de bienes nunca autoriza fuerza potencialmente letal, y los uniformados en protestas no pueden usar armas de fuego.","Art. 15"]
+];
+const qz=document.getElementById('quiz'),sc=document.getElementById('score');let hechas=0,bien=0;
+casos.forEach(([s,v,e,r],i)=>{
+  const d=document.createElement('div');d.className='q';
+  d.innerHTML=`<p class="tag">Caso ${i+1}</p><p class="s">${s}</p><div class="btns"><button id="q${i}si" type="button">Sí, puede</button><button id="q${i}no" type="button">No</button></div><div class="ans" hidden></div>`;
+  const a=d.querySelector('.ans'),bs=d.querySelectorAll('button');
+  bs.forEach((b,j)=>b.onclick=()=>{
+    const resp=j===0,ok=resp===v;hechas++;if(ok)bien++;
+    bs.forEach(x=>x.disabled=true);
+    a.className='ans '+(ok?'good':'bad');a.hidden=false;
+    a.innerHTML=`<strong>${ok?'Correcto':'No exactamente'}. ${v?'Sí puede intervenir':'No puede intervenir por eso'}.</strong> ${e} <span class="ref">${r}</span>`;
+    sc.textContent=hechas<casos.length?`${hechas} de ${casos.length} respondidas · ${bien} correctas`:`Terminaste: ${bien} de ${casos.length} correctas`;
+  });
+  qz.appendChild(d);
+});
+if('serviceWorker' in navigator && location.protocol==='https:' && !location.hostname.endsWith('claude.ai')){
+  navigator.serviceWorker.register('sw.js').catch(()=>{});
+}
+</script>
+</body>
+</html>
